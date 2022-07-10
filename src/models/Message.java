@@ -12,13 +12,14 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tasks")
 @NamedQueries({
     @NamedQuery(
         name = "getAllMessages",
         query = "SELECT m FROM Message AS m ORDER BY m.id DESC"
     )
 })
+@Table(name = "tasks")
+
 public class Message {
     @Id
     @Column(name = "id")
